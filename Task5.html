@@ -12,11 +12,16 @@
         body{
             font-size:62.5%;
         }
+        @media screen and  (max-width: 480px){
+            html{
+                font-size:50%;
+            }
+        }
         .container{
             margin:0;
             width:100%;
             height:100%;
-
+            position: relative;
         }
         .top{
             position:absolute;
@@ -84,25 +89,193 @@
             width:100%;
             height: 115vw;
             background-color: white;
+            overflow: hidden;
         }
         .details{
             position:absolute;
-            margin-left:8.3%;
+            margin:0;
+            padding-left:8.3%;
+            width:100%;
             line-height: 13.8vw;
             font-size: 4em;
+            border-bottom: 1px solid lightgray;
         }
-        .line1{
-            margin-top:13.8vw;
+        .house-food{
+            position:absolute;
+            margin-top: 13.8vw;
+            margin-left: 8.3%;
+            padding-left: 3%;
+            width: 100%;
+            height: 13.8vw;
+            border-bottom: 1px solid lightgray;
+        }
+        .house-food img{
+            float:left;
+            margin-top:6%;
+        }
+        .house{
+            float:left;
+            margin-top:5.3%;
+            margin-left:1%;
+            padding-right: 2%;
+            font-size: 3.5em;
+            border-right: 1px solid lightgray;
+        }
+        .img2{
+            float:left;
+            margin-top:6%;
+            margin-left:2%;
+        }
+        .food{
+            float:left;
+            margin-top:5.3%;
+            margin-left:1%;
+            font-size: 3.5em;
+        }
+        .clear{
+            clear: both;
+        }
+        .worktime{
+            position:absolute;
+            margin-top: 27.6vw;
+            margin-left: 8.3%;
+            padding-left: 3%;
+            width: 100%;
+            height: 13.8vw;
+            border-bottom: 1px solid lightgray;
+
+        }
+        .work{
+            float:left;
+            margin-top:5.3%;
+            margin-left:0;
+            padding-right: 2%;
+            font-size: 3.5em;
+            border-right: 1px solid lightgray;
+            color:grey;
+        }
+        .time{
+            float:left;
+            margin-top:5.3%;
+            margin-left:2%;
+            font-size: 3.5em;
+        }
+        .jobhours{
+              position:absolute;
+              margin-top: 41.4vw;
+              margin-left: 8.3%;
+              padding-left: 3%;
+              width: 100%;
+              height: 13.8vw;
+              border-bottom: 1px solid lightgray;
+          }
+        .job{
+            float:left;
+            margin-top:5.3%;
+            margin-left:0;
+            padding-right: 2%;
+            font-size: 3.5em;
+            border-right: 1px solid lightgray;
+            color:grey;
+        }
+        .hours{
+            float:left;
+            margin-top:5.3%;
+            margin-left:2%;
+            font-size: 3.5em;
+        }
+        .serviceprice{
+            position:absolute;
+            margin-top: 55.2vw;
+            margin-left: 8.3%;
+            padding-left: 3%;
+            width: 100%;
+            height: 13.8vw;
+            border-bottom: 1px solid lightgray;
+        }
+        .service{
+            float:left;
+            margin-top:5.3%;
+            margin-left:0;
+            padding-right: 2%;
+            font-size: 3.5em;
+            border-right: 1px solid lightgray;
+            color:grey;
+        }
+        .price{
+            float:left;
+            margin-top:5.3%;
+            margin-left:2%;
+            font-size: 3.5em;
+            color:crimson;
+        }
+        .selfintroduce{
+            position:absolute;
+            margin-top: 69vw;
+            padding-left: 11.3%;
+            width: 100%;
+            height: 13.8vw;
+            border-bottom: 1px solid lightgray;
+
+        }
+        .self {
+            float: left;
+            margin-top: 5.3%;
+            margin-left: 0;
+            padding-right: 2%;
+            font-size: 3.5em;
+            border-right: 1px solid lightgray;
+            color:grey;
+
+        }
+        .introduce{
+            float:left;
+            margin-top:6%;
+            margin-left:2%;
+
+            font-size: 2em;
+        }
+        .footer{
+            position:absolute;
+            margin-top: 96vw;
+            width: 100%;
+            height: 13.8vw;
+        }
+        .liuyan input{
+            position: absolute;
+            margin-left:5.5%;
+            width:43%;
+            height:12vw;
+            border: 2px solid #5FC0CD;
+            border-radius: 10px;
+            background-color: white;
+            font-size: 3em;
+            font-weight: bolder;
+            color: #5FC0CD;
+        }
+        .dianhua input{
+            position: absolute;
+            margin-left:51.5%;
+            width:43%;
+            height:12vw;
+            border: 2px solid #5FC0CD;
+            border-radius: 10px;
+            background-color: #5FC0CD;
+            font-size: 3em;
+            font-weight: bolder;
+            color:white;
         }
 
     </style>
 </head>
 <body>
 <div class="container">
+
     <div class="top">
         <img src="task5-1_01.png"/>
         <div class="title"><span >个人主页</span></div>
     </div>
+
     <div class="content">
         <div class="picture">
             <div class="touxiang">
@@ -113,20 +286,81 @@
             <span>高素雅&nbsp51岁</span>
         </div>
         <div class="adrs">
-            <img src="task5-1-04.png"/>
+            <img  style="width: 8%" src="task5-1-04.png"/>
             <span>北京.通州.果园</span>
         </div>
     </div>
+
     <div class="main">
+
         <div class="details">
             <img src="task5-1-06.png"/>
             <span>专业技能</span>
         </div>
-        <div class="line1">
-            <hr />
+
+        <div class="house-food">
+            <img src="task5-1-05.png"/>
+            <div class="house">
+                <span>住家</span>
+            </div>
+            <div class="img2"><img src="task5-1-05.png"/></div>
+            <div class="food">
+                <span>不含餐</span>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="worktime">
+            <div class="work">
+            <span>从业年限</span>
+            </div>
+            <div class="time">
+                <span>0~3年</span>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="jobhours">
+            <div class="job">
+                <span>工作时间</span>
+            </div>
+            <div class="hours">
+                <span>全天</span>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="serviceprice">
+            <div class="service">
+                <span>服务价格</span>
+            </div>
+            <div class="price">
+                <span>25元/小时</span>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="selfintroduce">
+            <div class="self">
+                <span>自我介绍</span>
+            </div>
+            <div class="introduce">
+                <span>可以洗衣、做饭、照顾老人。在护工方面有五年经验，经验丰富。</span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="footer">
+            <div class="liuyan">
+                <input type="button" value="留言">
+            </div>
+            <div class="dianhua">
+                <input type="button" value="电话联系">
+            </div>
+
         </div>
 
 
+    </div>
 </div>
 
 </body>
