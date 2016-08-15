@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Task6-3</title>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        html{
+            font-size: 62.5%;
+            font-family: 黑体;
+        }
+        body{
+            background-color: #29BDE0;
+        }
+        .container{
+            margin:0 auto;
+            width:100%;
+            height:100%;
+
+        }
+        .top{
+            position: relative;
+            width: 100%;
+            height: 10.625vw;
+            background-color: #29BDE0;
+            text-align: center;
+            font-size: 3rem;
+            color:white;
+        }
+        img.menu {
+            position:absolute;
+            margin-top:2.1875%;
+            left:3.6%;
+            width:6%;
+        }
+        img.close{
+            position:absolute;
+            margin-top:2.1875%;
+            right:3.6%;
+            width:5.625%;
+        }
+        .discas{
+            position: relative;
+            width:100%;
+            height: 12.8125vw;
+            background-color: #B9E9F5;
+            font-size: 2.5rem;
+            color:black;
+        }
+        .discas span{
+            margin-left:7.34375%;
+            line-height: 12.8125vw
+        }
+        .triangle{
+            margin-left:11%;
+            width:0;
+            height:0;
+            border-top: 2.5vw solid #B9E9F5;
+            border-right:  2.5vw solid #29BDE0;
+            border-bottom:  2.5vw solid #29BDE0;
+            border-left:  2.5vw solid #29BDE0;
+        }
+        .play{
+            position:absolute;
+            top:18.3%;
+            right:2.65625%;
+            width:8.125%;
+            height: 8.125vw;
+            border-radius: 100%;
+            background-color: #FBB435;
+        }
+        .play img{
+            width:50%;
+            margin-top: 21.15%;
+            margin-left: 31%;
+        }
+        p{
+            margin-left:11.25%;
+            padding-bottom: 3.123%;
+            font-size: 2rem;
+            color:white;
+        }
+        .player{
+            float:left;
+            margin-top:3.59375%;
+            margin-left:6.25%;
+            width:21.25%;
+
+        }
+        .player-top{
+
+            width:100%;
+            height: 21.25vw;
+            border:0.5rem solid white;
+            background-color: #FBB435;
+        }
+        .name{
+            width:100%;
+            height:17vw;
+            text-align: center;
+            font-size: 3.5rem;
+        }
+        .name span{
+            font-size: 3rem;
+            line-height: 17vw;
+
+        }
+        .number{
+            width:100%;
+            height:4.25vw;
+            background-color: #83B09A;
+            text-align: center;
+        }
+        .number span{
+            font-size: 2rem;
+            line-height: 4.25vw;
+            color:white;
+        }
+        .player-bottom{
+            margin-top:3.59375%;
+            opacity: 0;
+        }
+        .player-bottom img{
+            width:22%;
+        }
+        img.icon2{
+            margin-left:1.8%;
+        }
+        img.icon3{
+            margin-left:1.8%;
+        }
+        img.icon4{
+            margin-left:1.8%;
+        }
+        .player1{
+            float:left;
+            margin-top:3.59375%;
+            margin-left:10.94%;
+            width:21.25%;
+        }
+        .footer{
+            position: fixed;
+            bottom:0;
+            width:100%;
+            height:20vw;
+            background-color: #29BDE0;
+            border-top: 0.2rem solid white;
+            text-align: center;
+            line-height:20vw ;
+        }
+        .footer input{
+            width:60%;
+            height: 10vw;
+            background-color: #FBB435;
+            font-size: 3rem;
+            color:white;
+        }
+        .player-bottom:hover{
+            opacity: 1;
+        }
+        .footer input:hover{
+            opacity: 0.8;
+        }
+        .play:hover{
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="top">
+        <img class="menu" src="task6-3-1.png"/>
+        <span style="line-height: 10.625vw">投票</span>
+        <img class="close" src="task6-3-2.png" />
+    </div>
+    <div class="discas">
+        <span>发言讨论结束，请大家投票</span>
+
+        <div class="play">
+            <img src="task-6-3-3.png"/>
+        </div>
+
+    </div>
+    <div class="triangle"></div>
+    <p>点击得票数最多人的头像</p>
+    <div class="player">
+        <div class="player-top">
+            <div class="name"><span>水民</span></div>
+            <div class="number"><span>1号</span></div>
+        </div>
+        <div class="player-bottom">
+            <img class="icon1" src="task6-3-icon1.png"/>
+            <img class="icon2" src="task6-3-icon2.png"/>
+            <img class="icon3" src="task6-3-icon3.png"/>
+            <img class="icon4" src="task6-3-icon4.png"/>
+        </div>
+    </div>
+    <div class="player1">
+        <div class="player-top">
+            <div class="name"><span>水民</span></div>
+            <div class="number"><span>2号</span></div>
+        </div>
+        <div class="player-bottom">
+            <img class="icon1" src="task6-3-icon1.png"/>
+            <img class="icon2" src="task6-3-icon2.png"/>
+            <img class="icon3" src="task6-3-icon3.png"/>
+            <img class="icon4" src="task6-3-icon4.png"/>
+        </div>
+    </div>
+    <div class="player1">
+        <div class="player-top">
+            <div class="name"><span>警察</span></div>
+            <div class="number"><span>3号</span></div>
+        </div>
+        <div class="player-bottom">
+            <img class="icon1" src="task6-3-icon1.png"/>
+            <img class="icon2" src="task6-3-icon2.png"/>
+            <img class="icon3" src="task6-3-icon3.png"/>
+            <img class="icon4" src="task6-3-icon4.png"/>
+        </div>
+    </div>
+    <div class="player">
+        <div class="player-top">
+            <div class="name"><span>法官</span></div>
+            <div class="number"><span>4号</span></div>
+        </div>
+        <div class="player-bottom">
+            <img class="icon1" src="task6-3-icon1.png"/>
+            <img class="icon2" src="task6-3-icon2.png"/>
+            <img class="icon3" src="task6-3-icon3.png"/>
+            <img class="icon4" src="task6-3-icon4.png"/>
+        </div>
+    </div>
+    <div class="player1">
+        <div class="player-top">
+            <div class="name"><span>狙击手</span></div>
+            <div class="number"><span>5号</span></div>
+        </div>
+        <div class="player-bottom">
+            <img class="icon1" src="task6-3-icon1.png"/>
+            <img class="icon2" src="task6-3-icon2.png"/>
+            <img class="icon3" src="task6-3-icon3.png"/>
+            <img class="icon4" src="task6-3-icon4.png"/>
+        </div>
+    </div>
+    <div class="player1">
+        <div class="player-top">
+            <div class="name"><span>医生</span></div>
+            <div class="number"><span>7号</span></div>
+        </div>
+        <div class="player-bottom">
+            <img class="icon1" src="task6-3-icon1.png"/>
+            <img class="icon2" src="task6-3-icon2.png"/>
+            <img class="icon3" src="task6-3-icon3.png"/>
+            <img class="icon4" src="task6-3-icon4.png"/>
+        </div>
+    </div>
+    <div class="player">
+        <div class="player-top">
+            <div class="name"><span>杀手</span></div>
+            <div class="number"><span>8号</span></div>
+        </div>
+        <div class="player-bottom">
+            <img class="icon1" src="task6-3-icon1.png"/>
+            <img class="icon2" src="task6-3-icon2.png"/>
+            <img class="icon3" src="task6-3-icon3.png"/>
+            <img class="icon4" src="task6-3-icon4.png"/>
+        </div>
+    </div>
+    <div class="player1">
+        <div class="player-top">
+            <div class="name"><span>曹操</span></div>
+            <div class="number"><span>9号</span></div>
+        </div>
+        <div class="player-bottom">
+            <img class="icon1" src="task6-3-icon1.png"/>
+            <img class="icon2" src="task6-3-icon2.png"/>
+            <img class="icon3" src="task6-3-icon3.png"/>
+            <img class="icon4" src="task6-3-icon4.png"/>
+        </div>
+    </div>
+    <div class="player1">
+        <div class="player-top">
+            <div class="name"><span>刘备</span></div>
+            <div class="number"><span>10号</span></div>
+        </div>
+        <div class="player-bottom">
+            <img class="icon1" src="task6-3-icon1.png"/>
+            <img class="icon2" src="task6-3-icon2.png"/>
+            <img class="icon3" src="task6-3-icon3.png"/>
+            <img class="icon4" src="task6-3-icon4.png"/>
+        </div>
+    </div>
+    <div class="player">
+        <div class="player-top">
+            <div class="name"><span>孙权</span></div>
+            <div class="number"><span>11号</span></div>
+        </div>
+        <div class="player-bottom">
+            <img class="icon1" src="task6-3-icon1.png"/>
+            <img class="icon2" src="task6-3-icon2.png"/>
+            <img class="icon3" src="task6-3-icon3.png"/>
+            <img class="icon4" src="task6-3-icon4.png"/>
+        </div>
+    </div>
+    <div class="player1">
+        <div class="player-top">
+            <div class="name"><span>孙策</span></div>
+            <div class="number"><span>12号</span></div>
+        </div>
+        <div class="player-bottom">
+            <img class="icon1" src="task6-3-icon1.png"/>
+            <img class="icon2" src="task6-3-icon2.png"/>
+            <img class="icon3" src="task6-3-icon3.png"/>
+            <img class="icon4" src="task6-3-icon4.png"/>
+        </div>
+    </div>
+    <div class="player1">
+        <div class="player-top">
+            <div class="name"><span>周瑜</span></div>
+            <div class="number"><span>13号</span></div>
+        </div>
+        <div class="player-bottom">
+            <img class="icon1" src="task6-3-icon1.png"/>
+            <img class="icon2" src="task6-3-icon2.png"/>
+            <img class="icon3" src="task6-3-icon3.png"/>
+            <img class="icon4" src="task6-3-icon4.png"/>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="http://119.10.57.69:880/jnshu042/Task6-2.html">
+            <input type="button" value="投死"/>
+        </a>
+    </div>
+</div>
+</body>
+</html>
