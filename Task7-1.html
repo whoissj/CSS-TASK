@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Task7-1</title>
+    <link rel="stylesheet" type="text/css" href="Task7.css"/>
+    <style type="text/css">
+        body{
+            font-family:Microsoft YaHei;
+        }
+        *{margin:0;padding:0;}
+
+        @-webkit-keyframes slide{
+            0% {
+                margin-left:0;
+            }
+            20% {
+                margin-left: -1920px;
+            }
+            40% {
+                margin-left: -3840px;
+            }
+            60% {
+                margin-left: -5760px;
+            }
+            80% {
+                margin-left: -7680px;
+            }
+            100% {
+                margin-left: 0;
+            }
+        }
+        @-moz-keyframes slide {
+            0% {
+                margin-left:0;
+            }
+            20% {
+                margin-left: -1920px;
+            }
+            40% {
+                margin-left: -3840px;
+            }
+            60% {
+                margin-left: -5760px;
+            }
+            80% {
+                margin-left: -7680px;
+            }
+            100% {
+                margin-left: 0;
+            }
+        }
+        @-o-keyframes slide {
+            0% {
+                margin-left:0;
+            }
+            20% {
+                margin-left: -1920px;
+            }
+            40% {
+                margin-left: -3840px;
+            }
+            60% {
+                margin-left: -5760px;
+            }
+            80% {
+                margin-left: -7680px;
+            }
+            100% {
+                margin-left: 0;
+            }
+        }
+        @keyframes slide {
+            0% {
+                margin-left:0;
+            }
+            20% {
+                margin-left: -1920px;
+            }
+            40% {
+                margin-left: -3840px;
+            }
+            60% {
+                  margin-left: -5760px;
+            }
+            80% {
+                margin-left: -7680px;
+            }
+            100% {
+                margin-left: 0;
+            }
+        }
+        .banner {
+            margin: 0;
+            width: 1920px;
+            height: 600px;
+            overflow: hidden;
+                   }
+        .picture{
+            width:7680px;
+            -webkit-animation: slide 15s ease-in-out infinite;
+            -o-animation: slide 15s ease-in-out infinite;
+            animation: slide 15s ease-in-out infinite;
+
+        }
+        .picture img{
+            float: left;
+            width:1920px;
+        }
+        .picture:hover{
+            animation-play-state: paused;
+            -moz-animation-play-state: paused;
+            -webkit-animation-play-state: paused;
+            -o-animation-play-state: paused;
+        }
+        .main{
+            position: relative;
+            width:1920px;
+
+            overflow: hidden;
+            background-color: #FAFAFA;
+        }
+        .icon{
+
+            margin-top:163px;
+            margin-left:400px;
+            padding:0;
+            width: 755px;
+            height:62px;
+        }
+        .rocket{
+            float:left;
+            width:43px;
+            height:62px;
+            background-image: url("task7-sprite.png");
+            background-position: -432px 0;
+        }
+        .books{
+            float:left;
+            margin-top:14px;
+            margin-left: 275px;
+            width:60px;
+            height:48px;
+            background-image: url("task7-sprite.png");
+            background-position: 0 -167px;
+        }
+        .people{
+            float:left;
+            margin-top:7px;
+            margin-left: 275px;
+            width:52px;
+            height:55px;
+            background-image: url("task7-sprite.png");
+            background-position:  -528px 0;
+        }
+        .r-text{
+            float:left;
+            margin-top:32px;
+            margin-left: 321px;
+            width:208px;
+            letter-spacing: 2px;
+        }
+        .b-text{
+            float:left;
+            margin-top:32px;
+            margin-left: 125px;
+            width:208px;
+            letter-spacing: 2px;
+        }
+        .p-text{
+            float:left;
+            margin-top:32px;
+            margin-left: 115px;
+            width:208px;
+            letter-spacing: 2px;
+        }
+        .r-text p:nth-of-type(1){
+            margin-left:80px;
+            font-size: 18px;
+            font-weight: bolder;
+        }
+        .r-text p:nth-of-type(2){
+            margin-top:30px;
+            font-size: 16px;
+            font-weight: bold;
+            color:grey;
+            line-height: 26px;
+        }
+        .b-text p:nth-of-type(1){
+            margin-left:80px;
+            font-size: 18px;
+            font-weight: bolder;
+        }
+        .b-text p:nth-of-type(2){
+            margin-top:30px;
+            font-size: 16px;
+            font-weight: bold;
+            color:grey;
+            line-height: 26px;
+        }
+        .p-text p:nth-of-type(1){
+            margin-left:80px;
+            font-size: 18px;
+            font-weight: bolder;
+        }
+        .p-text p:nth-of-type(2){
+            margin-top:30px;
+            font-size: 16px;
+            font-weight: bold;
+            color:grey;
+            line-height: 26px;
+        }
+        .number{
+            position: absolute;
+            top: 163px;
+            left:1300px;
+            width:250px;
+            height:264px;
+            border-left:1px dashed grey;
+            letter-spacing: 2px;
+        }
+        .person1{
+            float:left;
+            margin-top:65px;
+            margin-left:55px;
+            width:13px;
+            height:13px;
+            background-image: url("task7-sprite.png");
+            background-position:  -580px 0;
+        }
+        .person2{
+            float:left;
+            margin-top:46px;
+            margin-left:55px;
+            width:13px;
+            height:13px;
+            background-image: url("task7-sprite.png");
+            background-position:  -580px 0;
+        }
+        .nb1{
+            margin-top: 61px;
+            margin-left: 83px;
+            font-size:18px;
+            color:#29B078;
+        }
+        .nb2{
+            margin-top: 43px;
+            margin-left: 83px;
+            font-size:18px;
+            color:#29B078;
+        }
+        .number p:nth-of-type(1){
+            font-size: 18px;
+            font-weight: bold;
+            color:grey;
+            margin-left: 53px;
+            line-height: 36px;
+        }
+        .number p:nth-of-type(2){
+            font-size: 18px;
+            font-weight: bold;
+            color:grey;
+            margin-left: 53px;
+            line-height: 36px;
+        }
+        .learn{
+            margin-top:100px;
+            margin-left: 321px;
+            width: 1250px;
+            height:310px;
+            text-align: center;
+        }
+        .learn p{
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        ul.l1-4{
+            list-style: none;
+            margin:0;
+            padding:0;
+            width: 1600px;
+            height: 72px;
+        }
+        ul.l5-8{
+            list-style: none;
+            margin-top: 40px;;
+            padding:0;
+            width: 1600px;
+            height: 72px;
+        }
+        ul.l1-4 li{
+            display: inline-block;
+        }
+        ul.l5-8 li{
+            display: inline-block;
+        }
+        li.c1{
+            float:left;
+            margin-top: 50px;
+            width: 72px;
+            height: 72px;
+            background-color: white;
+            border:2px solid lightgray;
+            border-radius: 100%;
+            text-align: center;
+            line-height: 72px;
+            font-size: 18px;
+            font-weight: bold;
+            color:#29B078;
+
+        }
+        li.c2{
+            float:left;
+            margin-top: 50px;
+            margin-left:25px;
+            width: 72px;
+            height: 72px;
+            background-color: white;
+            border:2px solid lightgray;
+            border-radius: 100%;
+            text-align: center;
+            line-height: 72px;
+            font-size: 18px;
+            font-weight: bold;
+            color:#29B078;
+
+        }
+
+        li.t{
+            float:left;
+            margin-top: 60px;
+            margin-left: 14px;
+            width:195px;
+            font-size: 14px;
+            font-weight: bold;
+            color:grey;
+            line-height: 28px;
+            text-align: left;
+        }li.t3{
+             float:left;
+             margin-top: 60px;
+             margin-left: 14px;
+             width:195px;
+             font-size: 14px;
+             font-weight: bold;
+             color:grey;
+             line-height: 52px;
+             text-align: left;
+         }
+        li.t4{
+            float:left;
+            margin-top: 60px;
+            margin-left: 14px;
+            width:195px;
+            font-size: 14px;
+            font-weight: bold;
+            color:grey;
+            line-height: 52px;
+            text-align: left;
+        }
+
+        li.a{
+            float:left;
+            margin-top: 75px;
+            margin-left:14px;
+            width:25px;
+            height:26px;
+            background-image: url("task7-sprite.png");
+            background-position:  -431px -62px;
+        }
+
+        .title-std{
+            width:1260px;
+            margin-top:120px;
+            margin-left: 321px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        ul.student{
+            list-style: none;
+            margin-top:76px;
+            margin-left: 321px;
+            left:
+            width:1200px;
+        }
+        ul.student li{
+            display: inline-block;
+            margin-right: 50px;
+            width: 270px;
+            height:385px;
+            background-color: white;
+            border:2px solid lightgray;
+        }
+        ul.student li:hover{
+            opacity: 0.7;
+            cursor: pointer;
+        }
+        .std1{
+              margin:20px 81px 0 81px;
+              width: 108px;
+              height:108px;
+              background-image: url("task7-sprite.png");
+              background-position: 0 0;
+          }
+        .std2{
+            margin:20px 81px 0 81px;
+            width: 108px;
+            height:108px;
+            background-image: url("task7-sprite.png");
+            background-position: -324px -0;
+        }
+        .std3{
+            margin:20px 81px 0 81px;
+            width: 108px;
+            height:108px;
+            background-image: url("task7-sprite.png");
+            background-position: -216px -0;
+        }
+        .std4{
+            margin:20px 81px 0 81px;
+            width: 108px;
+            height:108px;
+            background-image: url("task7-sprite.png");
+            background-position: -108px -0;
+        }
+        .name{
+            margin-top: 36px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .introdue{
+            margin-top: 36px;
+            margin-left:36px;
+            width:205px;
+            font-size: 16px;
+            font-weight: bold;
+            color:grey;
+            line-height: 26px;
+            letter-spacing: 1px;
+        }
+        ul.circle{
+            list-style: none;
+            margin-top:20px;
+            margin-left: 321px;
+            width: 1260px;
+            text-align: center;
+        }
+        ul.circle li{
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border: 2px solid lightgray;
+            border-radius: 100%;
+            background-color: white;
+        }
+        ul.circle li:hover{
+            background-color:#29B078;
+        }
+        .title-pater{
+            margin-top: 126px;
+            margin-left: 321px;
+            width:1260px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bolder;
+            letter-spacing: 2px;
+        }
+        ul.pater{
+            list-style:none;
+            margin-top: 68px;
+            margin-left: 321px;
+            margin-bottom: 90px;
+        }
+        ul.pater li{
+            display: inline-block;
+            margin:0;
+            padding:0;
+            width: 250px;
+            height:180px;
+            background-color: white;
+        }
+        ul.pater li:hover{
+
+            cursor: pointer;
+            opacity: 0.7;
+
+        }
+        .ali{
+            margin-top:61px;
+            margin-left:54px;
+            width: 142px;
+            height:58px;
+            background-image: url("task7-sprite.png");
+            background-position: -258px -109px;
+        }
+        .js{
+            margin-top: 61px;
+            margin-left: 98.5px;
+            width:53px;
+            height:58px;
+            background-image: url("task7-sprite.png");
+            background-position: -475px -0px;
+        }
+        .hx{
+            margin-top:61px;
+            margin-left:58px;
+            width:134px;
+            height:58px;
+            background-image: url("task7-sprite.png");
+            background-position: -124px -109px ;
+        }
+        .rl{
+            margin-top:61px;
+            margin-left:40.5px;
+            width:169px;
+            height:58px;
+            background-image: url("task7-sprite.png");
+            background-position: -402px -109px;
+        }
+        .qn{
+            margin-top:61px;
+            margin-left:63px;
+            width:124px;
+            height:58px;
+            background-image: url("task7-sprite.png");
+            background-position: 0 -109px;
+        }
+        .link{
+            width:1920px;
+            height:137px;
+            background-color: white;
+            overflow: hidden;
+            font-size: 14px;
+            font-weight: bold;
+            color:grey;
+            letter-spacing: 1px;
+        }
+        .title-link{
+            margin-top: 24px;
+            width:1920px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bolder;
+            letter-spacing: 2px;
+        }
+        ul.link-details1{
+            margin-top:20px;
+            margin-left:341px;
+            width:1200px;
+        }
+        ul.link-details2{
+            margin-top:14px;
+            margin-left:341px;
+            width:1200px;
+        }
+        ul.link-details1 li{
+            float:left;
+            margin-right:55px;
+        }
+        ul.link-details2 li{
+            float:left;
+            margin-right:55px;
+        }
+        a{
+            color:inherit;
+            text-decoration: none;
+        }
+        .up{
+            width:1920px;
+            height:172px;
+            border-bottom: 1px solid lightgrey;
+            overflow: hidden;
+        }
+
+        .down{
+            width:1920px;
+            line-height: 30px;
+            text-align: center;
+            color:white;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .jnshu{
+            float:left;
+            margin-top:40px;
+            margin-left:321px;
+            color:white;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .jnshu p:nth-of-type(2){
+            display: inline-block;
+            margin-top:68px;
+            padding-right: 10px;
+            border-right:2px solid white;
+        }
+        .jnshu p:nth-of-type(3){
+            display: inline-block;
+            margin-top:68px;
+            padding-right: 10px;
+            border-right:2px solid white;
+        }
+        .jnshu p:nth-of-type(4){
+            display: inline-block;
+            margin-top:68px;
+        }
+        .website{
+            float:left;
+            margin-top:40px;
+            margin-left: 160px;
+            color:white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <p>客服热线：010-549-78645</p>
+    <ul class="app">
+        <li class="wx"></li>
+        <li class="qq"></li>
+        <li class="wb"></li>
+    </ul>
+</div>
+<div class="clear"></div>
+<div class="nav">
+        <div class="home"><span>首页</span></div>
+        <div class="job">
+            <span>
+            <a href="http://119.10.57.69:880/jnshu042/Task8.html">职业</a>
+            </span>
+        </div>
+        <div class="recommend">
+            <span>
+                <a href="http://119.10.57.69:880/jnshu042/Task7-2.html">推荐</a>
+            </span></div>
+        <div class="about"><span>关于</span></div>
+</div>
+<div class="clear"></div>
+
+<div class="banner">
+    <div class="picture">
+        <img  src="task7-1-banner-1.jpg"/>
+        <img src="task7-1-banner-2.jpg"/>
+        <img src="task7-1-banner-3.jpg"/>
+        <img src="task7-1-banner-4.jpg"/>
+    </div>
+</div>
+<div class="clear"></div>
+<div class="main">
+        <div class="icon">
+            <div class="rocket"></div>
+            <div class="books"></div>
+            <div class="people"></div>
+        </div>
+        <div class="number">
+            <div class="person1"></div>
+            <div class="nb1"><span>12400</span></div>
+            <div class="clear"></div>
+            <p>累计在线学习人数</p>
+            <div class="person2"></div>
+            <div class="nb2"><span>12400</span></div>
+            <div class="clear"></div>
+            <p>学员已找到满意工作</p>
+        </div>
+        <div class="r-text"><p>高效</p><p>将五到七年的成长时间缩短到一到三年</p></div>
+        <div class="b-text"><p>规范</p><p>标准的实战教程，不会走弯路</p></div>
+        <div class="p-text"><p>人脉</p><P>同班好友，同院学长，技术大师，入学就混入职脉圈，为以后铺平道路</P></div>
+        <div class="clear"></div>
+        <div class="learn">
+            <p>如何学习</p>
+            <ul class="l1-4" >
+                <li class="c1"><span>1</span></li>
+                <li class="t"><p>匹配你现在的个人情况寻找合适的岗位</p></li>
+                <li class="a"></li>
+                <li class="c2"><span>2</span></li>
+                <li class="t"><p>了解行业前景薪资待遇竞争压力等</p></li>
+                <li class="a"></li>
+                <li class="c2"><span>3</span></li>
+                <li class="t3"><p>掌握行业内顶级技能</p></li>
+                <li class="a"></li>
+                <li class="c2"><span>4</span></li>
+                <li class="t4"><p>查看职业目标任务</p></li>
+            </ul>
+            <div class="clear"></div>
+            <ul class="l5-8">
+                <li class="c1"><span>5</span></li>
+                <li class="t"><p>参考学习资源掌握技能点，逐个完成任务</p></li>
+                <li class="a"></li>
+                <li class="c2"><span>6</span></li>
+                <li class="t"><p>加入班级和小伙伴们互帮互助，一起学习</p></li>
+                <li class="a"></li>
+                <li class="c2"><span>7</span></li>
+                <li class="t"><p>选择导师，一路引导，加速自己成长</p></li>
+                <li class="a"></li>
+                <li class="c2"><span>8</span></li>
+                <li class="t"><p>完成职业技能，升级业界大牛</p></li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+        <div class="title-std"><p>优秀学员展示区</p></div>
+        <ul class="student">
+            <li>
+                <div class="std1"></div>
+                <div class="name"><p>技术顾问：罗大佑</p></div>
+                <div class="introdue">
+                    <p>百度技术总监：互联网服务基础领域、从事虚拟主机、云服务器、域名。曾担任新网高级技术经理，负责技术研发、团队管理与建设。</p>
+                </div>
+            </li>
+            <li>
+                <div class="std2"></div>
+                <div class="name"><p>技术顾问：罗大佑</p></div>
+                <div class="introdue">
+                    <p>百度技术总监：互联网服务基础领域、从事虚拟主机、云服务器、域名。曾担任新网高级技术经理，负责技术研发、团队管理与建设。</p>
+                 </div>
+            </li>
+            <li>
+                <div class="std3"></div>
+                <div class="name"><p>技术顾问：罗大佑</p></div>
+                <div class="introdue">
+                    <p>百度技术总监：互联网服务基础领域、从事虚拟主机、云服务器、域名。曾担任新网高级技术经理，负责技术研发、团队管理与建设。</p>
+                </div>
+            </li>
+            <li>
+                <div class="std4"></div>
+                <div class="name"><p>技术顾问：罗大佑</p></div>
+                <div class="introdue">
+                    <p>百度技术总监：互联网服务基础领域、从事虚拟主机、云服务器、域名。曾担任新网高级技术经理，负责技术研发、团队管理与建设。</p>
+                </div>
+            </li>
+        </ul>
+        <ul class="circle">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="title-pater">
+            <p>战略合作伙伴</p>
+        </div>
+        <ul class="pater">
+            <li ><div class="ali"></div></li>
+            <li ><div class="js"></div></li>
+            <li ><div class="hx"></div></li>
+            <li ><div class="rl"></div></li>
+            <li ><div class="qn"></div></li>
+        </ul>
+        <div class="link">
+            <div class="title-link">
+                <p>友情链接</p>
+            </div>
+            <ul class="link-details1">
+                <li><a href="#">手机软件</a></li>
+                <li><a href="#">周边旅游</a></li>
+                <li><a href="#">兼职招聘</a></li>
+                <li><a href="#">同城交友</a></li>
+                <li><a href="#">二手市场</a></li>
+                <li><a href="#">美食频道</a></li>
+                <li><a href="#">人生感悟</a></li>
+                <li><a href="#">煮酒论史</a></li>
+                <li><a href="#">古今中外</a></li>
+                <li><a href="#">生肖星座</a></li>
+            </ul>
+            <div class="clear"></div>
+            <ul class="link-details2">
+                <li><a href="#">手机软件</a></li>
+                <li><a href="#">周边旅游</a></li>
+                <li><a href="#">兼职招聘</a></li>
+                <li><a href="#">同城交友</a></li>
+                <li><a href="#">二手市场</a></li>
+                <li><a href="#">美食频道</a></li>
+                <li><a href="#">人生感悟</a></li>
+                <li><a href="#">煮酒论史</a></li>
+                <li><a href="#">古今中外</a></li>
+                <li><a href="#">生肖星座</a></li>
+
+            </ul>
+        </div>
+</div>
+<div class="footer">
+    <div class="up">
+            <div class="jnshu">
+                <p>技能树-改变你我</p>
+                <p><a href="#">关于我们</a></p>
+                <p><a href="#">联系我们</a></p>
+                <p><a href="#">合作企业</a></p>
+            </div>
+            <div class="website">
+                <p>旗下网站</p>
+                <div class="clear"></div>
+                <p><a href="#">草船云孵化器</a></p>
+                <p><a href="#">最强IT训练营</a></p>
+                <div class="clear"></div>
+                <p><a href="#">葡萄藤轻游戏</a></p>
+                <p><a href="#">桌游精灵</a></p>
+            </div>
+            <div class="qr">
+                <p>微信公众平台</p>
+                <img src="task7-1-QR.jpg"/>
+            </div>
+        </div>
+        <div class="down">
+            <p> Copyright © 2015技能树 www.jnshu.com  All Rights Reserved | 京ICP备13005880号</p>
+        </div>
+</div>
+</body>
+</html>
