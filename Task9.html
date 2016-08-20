@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Task9</title>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            font-family: "Microsoft YaHei";
+        }
+        .header{
+            width:1920px;
+            height:40px;
+            background-color: #1D7AD9;
+            line-height: 40px;;
+        }
+        .header span:nth-of-type(1){
+            font-size: 14px;
+            color:white;
+            float: left;
+            margin-left:360px;
+        }
+        ul.login-register{
+            list-style: none;
+            font-size: 0;
+            float: left;
+            margin-left:867px;
+            height:40px;
+        }
+        ul.login-register li{
+            display: inline-block;
+            font-size: 16px;
+            color:white;
+            width:55px;
+            height:40px;
+            line-height: 40px;
+            text-align: center;
+        }
+        li.login{
+            border-left:1px solid white;
+            border-right:1px solid white;
+        }
+        li.register{
+            border-right:1px solid white;
+        }
+        ul.login-register li:hover{
+            cursor: pointer;
+            width:95px;
+            color:black;
+            background-color: white;
+            border-bottom:1px solid lavender;
+        }
+        .nav{
+            width:1920px;
+            height:100px;
+            background-color: #FAFAFA;
+        }
+        .nav ul{
+            list-style: none;
+            margin-left: 1010px;
+            height: 100px;
+            font-size: 0;
+            line-height: 100px;
+        }
+        .nav ul li{
+            display: inline-block;
+            font-size:16px;
+            color:black;
+            text-align: center;
+            height:47px;
+            line-height: 47px;
+            margin-right: 60px;
+            padding-right: 20px;
+            padding-left: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px #F5F5F5;
+        }
+        .nav ul li:hover{
+            cursor:pointer;
+            background-color: #1D7AD9;
+            color:white;
+        }
+        .main{
+            background-color: white;
+        }
+        .proc{
+            width:630px;
+
+            margin-left: 930px;
+            margin-top:40px;
+            padding:0;
+            display: -webkit-box;
+
+        }
+        .p1,.p2,.p3,.p4{
+            -webkit-box-flex: 1;
+            text-align: center;
+        }
+
+        .p1-1{
+            position: relative;
+            margin:0;
+            padding:0;
+            width:100%;
+        }
+        .bg1{
+            width:100%;
+            background-color: #CCCCCC;
+            position: absolute;
+            margin-top: 9.5px;
+            -webkit-border-top-left-radius: 5px;
+            -webkit-border-bottom-left-radius: 5px;
+        }
+        .bg2{
+            width:100%;
+            background-color: #CCCCCC;
+            position: absolute;
+            margin-top: 9.5px;
+        }
+        .bg3{
+            width:100%;
+            background-color: #CCCCCC;
+            position: absolute;
+            margin-top: 9.5px;
+        }
+        .bg4{
+            width:100%;
+            background-color: #CCCCCC;
+            position: absolute;
+            margin-top: 9.5px;
+            -webkit-border-top-right-radius: 5px;
+            -webkit-border-bottom-right-radius: 5px;
+        }
+        .line{
+            width:100%;
+            height:5px;
+            background-color: #CCCCCC;
+            border-radius: 5px;
+        }
+        .circle{
+            width:19px;
+            height:19px;
+            position:absolute;
+            margin-top: 2.5px;
+            margin-left:75px;
+            background-color: #CCCCCC;
+            border-radius: 100%;
+            line-height: 19px;
+            text-align: center;
+            color:white;
+            font-size:12px;
+        }
+        .p1 p{
+            margin-top: 34px;
+            font-size: 16px;
+            color: #CCCCCC;
+        }
+        .p2 p{
+            margin-top: 34px;
+            color: #CCCCCC;
+        }
+        .p3 p{
+            margin-top: 34px;
+            color: #CCCCCC;
+        }
+        .p4 p{
+            margin-top: 34px;
+            color: #CCCCCC;
+        }
+        .p1:hover p{
+            color:#E17F02;
+        }
+        .p1:hover .line{
+            background-color:#E17F02;
+        }
+        .p1:hover .circle{
+            width: 24px;
+            height: 24px;
+            margin-top:0;
+            margin-left: 72.5px;
+            background-color:#E17F02;;
+            line-height: 24px;
+            text-align: center;
+        }
+        .p2:hover p{
+            color:#E17F02;
+        }
+        .p2:hover .line{
+            background-color:#E17F02;
+        }
+        .p2:hover .circle{
+            width: 24px;
+            height: 24px;
+            margin-top:0;
+            margin-left: 72.5px;
+            background-color:#E17F02;;
+            line-height: 24px;
+            text-align: center;
+        }
+        .p3:hover p{
+            color:#E17F02;
+        }
+        .p3:hover .line{
+            background-color:#E17F02;
+        }
+        .p3:hover .circle{
+            width: 24px;
+            height: 24px;
+            margin-top:0;
+            margin-left: 72.5px;
+            background-color:#E17F02;;
+            line-height: 24px;
+            text-align: center;
+        }
+        .p4:hover p{
+            color:#E17F02;
+        }
+        .p4:hover .line{
+            background-color:#E17F02;
+        }
+        .p4:hover .circle{
+            width: 24px;
+            height: 24px;
+            margin-top:0;
+            margin-left: 72.5px;
+            background-color:#E17F02;;
+            line-height: 24px;
+            text-align: center;
+        }
+        .d-line{
+            float: left;
+            margin-top: 55px;
+            margin-left: 360px;
+            width: 5px;
+            height: 25px;
+            border-radius: 5px;
+            background-color: #1D7AD9;
+        }
+        p.step{
+            float: left;
+            margin-top: 52px;
+            margin-left: 10px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .clear{
+            clear:both;
+        }
+        .content{
+            margin-top:15px;
+            margin-left:360px;
+            margin-bottom: 55px;
+            width:1200px;
+            border: 1px solid #F6F6F7;
+        }
+
+        .title{
+            width:100%;
+            height:45px;
+            background-color: #F3F3F3;
+            line-height: 45px;
+        }
+
+
+
+        .style{
+            position: relative;
+            width:100%;
+            height:67px;
+            background-color: #FBFCFF;
+            line-height: 67px;
+            border-top: 1px solid #F6F6F7;
+            border-bottom:  1px solid #F6F6F7;
+        }
+        .style select{
+            position: absolute;
+            top: 13.5px;
+            right: 20px;
+            width: 128px;
+            height: 40px;
+            border: 2px solid #F3F3F3;
+            box-shadow: 5px 5px 5px #F3F3F3;
+            font-size: 16px;
+            color:gray;
+            -webkit-appearance: none;
+            padding-left: 14px;
+            background: url("task9-04.png") no-repeat 90px center;
+        }
+
+
+        .style form{
+            float: left;
+            margin-left: 45px;
+            font-size: 18px;
+            color: gray;
+        }
+        .style form input{
+            -webkit-appearance: none;
+            cursor: pointer;
+            margin-right: 20px;
+            width: 18px;
+            height:18px;
+            border-radius: 50%;
+            border:1px solid lightgray;
+            outline:none;
+        }
+        .style form input:checked{
+            border:7px solid #1D7AD9;
+        }
+        .style form label{
+            cursor: pointer;
+            margin-right: 60px;
+        }
+        .size{
+            position: relative;
+            width:100%;
+            height:150px;
+            background-color: #FBFCFF;
+            border-top: 1px solid #F6F6F7;
+            border-bottom:  1px solid #F6F6F7;
+            font-size: 18px;
+            color:gray;
+        }
+        .size select{
+            position: absolute;
+            top: 55px;
+            right: 20px;
+            width: 128px;
+            height: 40px;
+            border: 2px solid #F3F3F3;
+            box-shadow: 5px 5px 5px #F3F3F3;
+            font-size: 16px;
+            color:gray;
+            -webkit-appearance: none;
+            padding-left: 14px;
+            background: url("task9-04.png") no-repeat 90px center;
+        }
+        form.data{
+            float: left;
+            margin-top: 40px;
+            margin-left: 45px;
+        }
+        input.outer{
+            -webkit-appearance: none;
+            cursor: pointer;
+            float: left;
+            margin-right: 20px;
+            width: 18px;
+            height:18px;
+            border-radius: 50%;
+            border:1px solid lightgray;
+            outline:none;
+        }
+        input.outer:checked{
+            border:7px solid #1D7AD9;
+        }
+        input.inner{
+            -webkit-appearance: none;
+            cursor: pointer;
+            float: left;
+            margin-right: 20px;
+            width: 18px;
+            height:18px;
+            border-radius: 50%;
+            border:1px solid lightgray;
+            outline:none;
+        }
+        input.inner:checked{
+            border:7px solid #1D7AD9;
+        }
+        .size form label:nth-of-type(1){
+            cursor: pointer;
+            margin-right: 60px;
+        }
+        .size form label:nth-of-type(5){
+            cursor: pointer;
+            margin-right: 60px;
+        }
+        label.width{
+            margin-top: 33px;
+            margin-left: 60px;
+        }
+        label.heigth{
+            margin-top: 33px;
+            margin-left: 60px;
+        }
+        label.length input{
+            margin-right: 6px;
+            margin-left: 6px;
+            width: 70px;
+            height: 18px;
+            border: 1px solid lightgray;
+        }
+        label.width input{
+            margin-right: 6px;
+            margin-left: 6px;
+            width: 70px;
+            height:18px;
+            border: 1px solid lightgray;
+        }
+        label.heigth input{
+            margin-right: 6px;
+            margin-left: 6px;
+            width: 70px;
+            height: 18px;
+            border: 1px solid lightgray;
+        }
+
+
+        .kind{
+            position:relative;
+            width:100%;
+            height:150px;
+            background-color: #FBFCFF;
+            line-height: 150px;
+            border-top: 1px solid #F6F6F7;
+            border-bottom:  1px solid #F6F6F7;
+        }
+        .kind select{
+            position: absolute;
+            top: 55px;
+            right: 20px;
+            width: 128px;
+            height: 40px;
+            border: 2px solid #F3F3F3;
+            box-shadow: 5px 5px 5px #F3F3F3;
+            font-size: 16px;
+            color:gray;
+            -webkit-appearance: none;
+            padding-left: 14px;
+            background: url("task9-04.png") no-repeat 90px center;
+        }
+        .kind form{
+            float: left;
+            margin-left: 45px;
+            font-size: 18px;
+            color: gray;
+        }
+        .kind form input{
+            -webkit-appearance: none;
+            cursor: pointer;
+            margin-right: 20px;
+            width: 18px;
+            height:18px;
+            border-radius: 50%;
+            border:1px solid lightgray;
+            outline:none;
+        }
+        .kind form input:checked{
+            border:7px solid #1D7AD9;
+        }
+        .kind form label{
+            cursor: pointer;
+            margin-right: 60px;
+        }
+        .next{
+            width:100%;
+            height: 280px;
+            background-color: white;
+            border-bottom:  1px solid #F6F6F7;
+            line-height: 280px;
+            text-align: center;
+        }
+        .title img.t1{
+            float: left;
+            margin-top:15px;
+            margin-left:15px;
+        }
+        .title img.t2{
+            float: left;
+            margin-top:11px;
+            margin-left:15px;
+        }
+        .title img.t3{
+            float: left;
+            margin-top:11px;
+            margin-left:15px;
+        }
+        .title span{
+            font-size: 18px;
+            margin-left: 10px;
+            color: #1D7AD9;
+        }
+        .next input{
+            width:180px;
+            height:45px;
+            font-size: 18px;
+            font-weight: bolder;
+            color: white;
+            background-color: #FF5053;
+            border-radius: 5px;
+            cursor: pointer;
+            outline: none;
+        }
+        .info{
+            position: relative;
+            width:1920px;
+            height:203px;
+            background-color: #F9F9F9;
+            overflow: hidden;
+        }
+        .info span:nth-of-type(1){
+            float: left;
+            margin-top:65px;
+            margin-left:360px;
+            font-size: 18px;
+            color: gray;
+        }
+        .info span:nth-of-type(2){
+            float: left;
+            margin-top:65px;
+            margin-left:180px;
+            font-size: 14px;
+            color: gray;
+        }
+        .info span:nth-of-type(2):hover{
+            cursor: pointer;
+            color: #1D7AD9;
+        }
+
+        .info span:nth-of-type(3){
+            float: left;
+            margin-top:65px;
+            margin-left:45px;
+            font-size: 14px;
+            color: gray;
+        }
+        .info span:nth-of-type(3):hover{
+            cursor: pointer;
+            color: #1D7AD9;
+        }
+        .info span:nth-of-type(4){
+            float: left;
+            margin-top:65px;
+            margin-left:45px;
+            font-size: 14px;
+            color: gray;
+        }
+        .info span:nth-of-type(4):hover{
+            cursor: pointer;
+            color: #1D7AD9;
+        }
+        .info span:nth-of-type(5){
+            position: absolute;
+            top:107px;
+            left:818px;
+            font-size: 14px;
+            color: gray;
+        }
+        .info span:nth-of-type(5):hover{
+            cursor: pointer;
+            color: #1D7AD9;
+        }
+        .info span:nth-of-type(6){
+            position: absolute;
+            top:107px;
+            left:920px;
+            font-size: 14px;
+            color: gray;
+        }
+        .info span:nth-of-type(6):hover{
+            cursor: pointer;
+            color: #1D7AD9;
+        }
+        .info span:nth-of-type(7){
+            position: absolute;
+            top:65px;
+            left:1315px;
+            font-size: 14px;
+            color: gray;
+        }
+        .info span:nth-of-type(8){
+            position: absolute;
+            top:100px;
+            left:1315px;
+            font-size: 14px;
+            color: gray;
+        }
+        .info span:nth-of-type(9){
+            position: absolute;
+            top:133px;
+            left:1315px;
+            font-size: 14px;
+            color: gray;
+        }
+        .info img{
+            position: absolute;
+            top:65px;
+            left:1470px;
+        }
+        .footer{
+            width:1920px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            font-size: 12px;
+            color: white;
+            background-color: #1D7AD9;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <span>客服热线：010-594-78634</span>
+    <ul class="login-register">
+        <li class="login">登陆</li>
+        <li class="register">注册</li>
+    </ul>
+</div>
+<div class="nav">
+     <ul>
+         <li>首页</li>
+         <li>在线定制</li>
+         <li>标准箱</li>
+         <li>品质保障</li>
+     </ul>
+</div>
+<div class="main">
+    <div class="proc">
+        <div class="p1">
+            <div class="p1-1">
+                <div class="bg1"><div class="line"></div></div>
+                <div class="circle"><span>1</span></div>
+            </div>
+            <p>1.定制纸箱</p>
+        </div>
+        <div class="p2">
+            <div class="p1-1">
+                <div class="bg2"><div class="line"></div></div>
+                <div class="circle"><span>2</span></div>
+            </div>
+            <p>2.选择数量</p>
+        </div>
+        <div class="p3">
+            <div class="p1-1">
+                <div class="bg3"><div class="line"></div></div>
+                <div class="circle"><span>3</span></div>
+            </div>
+            <p>3.上传附件</p>
+        </div>
+        <div class="p4">
+            <div class="p1-1">
+                <div class="bg4"><div class="line"></div></div>
+                <div class="circle"><span>4</span></div>
+            </div>
+            <p>4.确认下单</p>
+        </div>
+    </div>
+    <div class="d-line"></div>
+    <p class="step">请您按照以下步骤来定制您的纸箱</p>
+    <div class="clear"></div>
+
+    <div class="content">
+        <div class="title">
+            <img class="t1" src="task9-01.png"/>
+            <span>选择箱型</span>
+        </div>
+
+        <div class="style">
+            <form>
+                <input type="radio" name="style" id="s1" checked="checked"/><label for="s1">对口箱</label>
+                <input type="radio" name="style" id="s2" /><label for="s2">飞机箱</label>
+                <input type="radio" name="style" id="s3" /><label for="s3">天地盖</label>
+            </form>
+            <select>
+                <option>查看详情</option>
+                <option>查看详情</option>
+                <option>查看详情</option>
+            </select>
+        </div>
+
+        <div class="title"><img class="t2" src="task9-02.png"/><span>确定尺寸</span></div>
+        <div class="size">
+            <form class="data">
+                <input class="outer" type="checkbox" name="outer" id="size1"/><label for="size1">外径</label>
+                <label class="length">长<input type="text" name="length"/>mm</label>
+                <label class="width">宽<input type="text" name="width"/>mm</label>
+                <label class="heigth">高<input type="text" name="height"/>mm</label>
+                <br><br>
+                <input class="inner" type="checkbox" name="inner" id="size2"/><label for="size2">内径</label>
+                <label class="length">长<input type="text" name="length"/>mm</label>
+                <label class="width">宽<input type="text" name="width"/>mm</label>
+                <label class="heigth">高<input type="text" name="height"/>mm</label>
+            </form>
+            <select>
+                <option>查看详情</option>
+                <option>查看详情</option>
+                <option>查看详情</option>
+            </select>
+        </div>
+        <div class="title"><img class="t3" src="task9-03.png"/><span>选择材质</span></div>
+        <div class="kind">
+            <form>
+                <input type="radio" name="style" id="k1" checked="checked"/><label for="k1">对口箱</label>
+                <input type="radio" name="style" id="k2" /><label for="k2">三层A瓦优质</label>
+                <input type="radio" name="style" id="k3" /><label for="k3">三层A瓦优质</label>
+                <input type="radio" name="style" id="k4" /><label for="k4">三层A瓦优质</label>
+                <input type="radio" name="style" id="k5" /><label for="k5">三层A瓦优质</label>
+            </form>
+            <select>
+                <option>查看详情</option>
+                <option>查看详情</option>
+                <option>查看详情</option>
+            </select>
+        </div>
+        <div class="next">
+            <a href="#"><input type="button" value="下一步"/></a>
+        </div>
+    </div>
+    <div class="info">
+        <span>51包装网— 纸箱包装首选服务平台</span>
+        <span>关于我们</span>
+        <span>配送流程</span>
+        <span>联系我们</span>
+        <span>下单指南</span>
+        <span>媒体介绍</span>
+        <span>TEL：400-0000-000</span>
+        <span>企业QQ：123456789</span>
+        <span>微信号：XXXXXXX</span>
+        <img src="task7-1-QR.jpg"/>
+    </div>
+    <div class="footer">
+        <p>  北京五一包装科技有限公司Copyright ©2015 &nbsp   51baozhuang.com015   All rights reserved.   京icp备99999999-1 </p>
+    </div>
+
+
+
+</div>
+</body>
+</html>
