@@ -49,7 +49,7 @@
 </nav>
 
 <div class="container-fluid proc">
-    <div class="proc-step">
+    <div class="proc-step col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <div class="p1">
             <div class="p1-1">
                 <div class="bg1"><div class="line"></div></div>
@@ -91,23 +91,79 @@
     <div class="title1">
         <span>选择箱型</span>
     </div>
-    <div class="style">
 
+    <div class="style">
+        <form class="row">
+            <label for="s1" class="col-lg-2 col-md-3 col-sm-3 col-xs-12"><input type="radio" name="style" id="s1" checked="checked"/>对口箱</label>
+            <label for="s2" class="col-lg-2 col-md-3 col-sm-3 col-xs-12"><input type="radio" name="style" id="s2" />飞机箱</label>
+            <label for="s3" class="col-lg-2 col-md-3 col-sm-3 col-xs-12"><input type="radio" name="style" id="s3" />天地盖</label>
+        </form>
+        <select>
+            <option>查看详情</option>
+            <option>查看详情</option>
+            <option>查看详情</option>
+        </select>
     </div>
+
     <div class="title2">
         <span>确定尺寸</span>
     </div>
     <div class="size">
-
+        <form class="outer row">
+            <label for="size1" class="col-lg-3 col-md-12 col-sm-12 col-xs-12 first-l"><input type="checkbox" name="outer" id="size1"/>外径</label>
+            <label class="col-lg-3 col-md-4 col-sm-4 col-xs-12 length">长<input class="data" type="text" name="length"/>mm</label>
+            <label class="col-lg-3 col-md-4 col-sm-4 col-xs-12 width">宽<input class="data" type="text" name="width"/>mm</label>
+            <label class="col-lg-3 col-md-4 col-sm-4 col-xs-12 height">高<input class="data" type="text" name="height"/>mm</label>
+        </form>
+        <form  class="inner row">
+            <label for="size2" class="col-lg-3 col-md-12 col-sm-12 col-xs-12 first-l"><input type="checkbox" name="outer" id="size2"/>内径</label>
+            <label class="col-lg-3 col-md-4 col-sm-4 col-xs-12 length">长<input class="data" type="text" name="length"/>mm</label>
+            <label class="col-lg-3 col-md-4 col-sm-4 col-xs-12 width">宽<input class="data" type="text" name="width"/>mm</label>
+            <label class="col-lg-3 col-md-4 col-sm-4 col-xs-12 height">高<input class="data" type="text" name="height"/>mm</label>
+        </form>
+        <select>
+            <option>查看详情</option>
+            <option>查看详情</option>
+            <option>查看详情</option>
+        </select>
     </div>
     <div class="title3">
         <span>选择材质</span>
     </div>
     <div class="material">
+        <form class="row">
+            <label for="k1" class="col-lg-2 col-md-5 col-sm-6 col-xs-12"><input type="radio" name="style" id="k1" checked="checked"/>三层A瓦优质</label>
+            <label for="k2" class="col-lg-2 col-md-5 col-sm-6 col-xs-12"><input type="radio" name="style" id="k2" />三层A瓦优质</label>
+            <label for="k3" class="col-lg-2 col-md-5 col-sm-6 col-xs-12"><input type="radio" name="style" id="k3" />三层A瓦优质</label>
+            <label for="k4" class="col-lg-2 col-md-5 col-sm-6 col-xs-12"><input type="radio" name="style" id="k4" />三层A瓦优质</label>
+            <label for="k5" class="col-lg-2 col-md-5 col-sm-6 col-xs-12"><input type="radio" name="style" id="k5" />三层A瓦优质</label>
+        </form>
+        <select>
+            <option>查看详情</option>
+            <option>查看详情</option>
+            <option>查看详情</option>
+        </select>
+    </div>
 
+    <div class="next">
+        <input type="button" class="btn btn-default" value="下一步"/>
     </div>
 </div>
 
+<div class="info">
+    <div class="container-fluid" id="info">
+        <div class="row" id="fter">
+            <div class="col-lg-4 col-md-12 col-sm-12" id="left">
+                <p>51包装网— 纸箱包装首选服务平台</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="container-fluid" id="footer">
+        <p> 北京五一包装科技有限公司Copyright ©2015 &nbsp51baozhuang.com015 All rights reserved.京icp备99999999-1</p>
+    </div>
+</div>
 
 <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
