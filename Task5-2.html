@@ -1,297 +1,298 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="zh-CN">
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Task5-2</title>
     <style type="text/css">
         *{
-            margin: 0;
-            padding: 0;
+            margin:0;
+            padding:0;
         }
-        @media (max-width: 321px) {
-            html{
-                font-size: 30%;
+        @media (max-width: 360px) {
+            html {
+                font-size: 150%;
             }
         }
-        @media (min-width: 321px) and (max-width: 481px) {
-            html{
-                font-size: 40%;
+        @media (min-width: 360px) {
+            html {
+                font-size: 200%;
             }
         }
-        @media (min-width: 481px) and (max-width: 641px) {
-            html{
-                font-size: 50%;
+        @media (min-width: 480px) {
+            html {
+                font-size: 250%;
+            }
+        }
+        @media (min-width: 768px) {
+            html {
+                /* 768px-992px每11.2像素宽字体减小2px(60px-80px) */
+                font-size: calc(375% + (100vw - 768px) / 11.2);
+            }
+        }
+        @media (min-width: 992px) {
+            html {
+                /* 992px-1200px每10.4像素宽字体减小2px(80px-100px) */
+                font-size: calc(500% + (100vw - 992px) / 10.4);
+            }
+        }
+        @media (min-width: 1200px) {
+            html {
+                /* 大于1200px，1rem=100px */
+                font-size:625%;
             }
         }
         body{
-            font-size: 62.5%;
             font-family: 黑体;
         }
         .container{
-            position: relative;
             width:100%;
             min-width: 320px;
-            height:100%;
         }
        .top{
-           position: absolute;
            width:100%;
-           height:12vw;
-           background-color:  #5FC0CD;
-           display:-webkit-box;
-           -webkit-box-pack:center;
+           height:1.6rem;
+           background-color: #5FC0CD;
+           position: relative;
+           text-align: center;
        }
-        .employer{
-            margin-top:2vw;
-            width:20%;
-            height:8vw;
+        .location{
+            position: absolute;
+            top: 0.36rem;
+            right: 0.56rem;
+            width: 0.79rem;
+        }
+        .wrap{
+            display: inline-block;
+            width:5.36rem;
+            height:1.3rem;
             background-color: #55A8B3;
-            border-radius:12px;
-            font: bold 5em 黑体;
+            border-radius: 0.1rem;
+            vertical-align: middle;
+            font-size: 0.64rem;
+            margin-top: 0.15rem;
+        }
+        .employer{
+            line-height: 1.3rem;
+            display: inline-block;
             color:white;
-            text-align: center;
-            line-height: 8vw;
         }
         .nurse{
-            margin-left: -1%;
-            margin-top:2vw;
-            width:20%;
-            height:8vw;
-            background-color:white;
-            border-radius: 12px;
-            font: bold 5em 黑体;
-            color: #55A8B3;
-            text-align: center;
-            line-height: 8vw;
-        }
-        .location img{
-            position:absolute;
-            width:6%;
-            margin-left: 90.8%;
-            margin-top:2.5vw;
-        }
-        .main-top{
-            position:absolute;
-            margin-top:12vw;
-            width: 100%;
-            height: 12vw;
-            border-bottom: 2px solid lightgray;
-            display:-webkit-box;
-            font-size:5em;
-            color:lightgray;
-            line-height: 12vw;
-        }
-        .main-top img{
-            width:5%;
-            float:right;
-            margin-top:25%;
-            margin-right:5%;
-        }
-        p{
-            display: inline-block;
-        }
-        .area{
-            -webkit-box-flex:1;
-            height: 12vw;
-            padding-left:10%;
-        }
-
-        .room{
-            -webkit-box-flex: 1;
-            height: 12vw;
-            padding-left:10%;
-            border-left: 2px solid lightgray;
-        }
-        .patient{
-            -webkit-box-flex: 1;
-            height: 12vw;
-            padding-left:10%;
-            border-left: 2px solid lightgray;
-        }
-        .main1{
-            position:absolute;
-            margin-top:24vw;
-            width: 100%;
-            border-bottom: 2px solid lightgray;
-            padding-bottom: 4%;
-        }
-        .title{
-            margin-top:4%;
-            margin-left:6%;
-            font-size:5em;
-            color:lightgray;
-        }
-        .title img{
-            width:3.2%;
-        }
-        .data-time{
-            width:100%;
-            margin-top:4%;
-            margin-left:6%;
-            font-size: 5em;
-        }
-        .data-time img{
-            width:1.5%;
-            margin-left: 4%;
-        }
-        .adr{
-            margin-top:4%;
-            margin-left:6%;
-            font-size:5em;
-            color:lightgray;
-        }
-        .adr img{
-            width: 2.8%;
-        }
-        .main2 {
-            position: absolute;
-            margin-top: 52vw;
-            width: 100%;
-            border-bottom: 2px solid lightgray;
-            padding-bottom: 4%;
-        }
-        .main3{
-            position: absolute;
-            margin-top: 80vw;
-            width: 100%;
-            border-bottom: 2px solid lightgray;
-            padding-bottom: 4%;
-        }
-        .bottom{
-            position:fixed;
-            bottom: 0;
-            width: 100%;
-            height: 13.1vw;
-            background-color: #F8FAFB;
-            font-size: 4em;
-        }
-
-        .home{
-            margin-top:2%;
-            float:left;
-            margin-left:23%;
+            float: right;
+            margin-right: 0.01rem;
+            width: 2.7rem;
+            line-height: 1.3rem;
+            background-color: white;
+            border-radius: 0.1rem;
             color:#5FC0CD;
         }
-        .home img{
+        .info{
             width:100%;
+            height: 1.5rem;
+            line-height: 1.5rem;
+            border-bottom: 0.02rem solid lightgray;
+            font-size: 0;
+            color:#999999;
+        }
+        .area,.room,.patient{
+            display: inline-block;
+            text-align: center;
+            width:32%;
+            margin:0;
+            padding:0;
+            font-size: 0.52rem;
+            position: relative;
+        }
+        .triangle{
+            position: absolute;
+            top:0.65rem;
+            right:0.23rem;
+            width:0;
+            height:0;
+            border-top: 0.24rem solid lightgray;
+            border-left: 0.24rem solid transparent;
+            border-right: 0.24rem solid transparent;
+        }
+        .line{
+            position: absolute;
+            top:0.25rem;
+            right:0;
+            width: 0.02rem;
+            height:1rem;
+            background-color: lightgray;
+        }
+        .main{
+            height: 3.36rem;
+            border-bottom: 0.02rem solid lightgray;
+        }
+        .title{
+            background: url(task5-2-02.jpg) no-repeat left center;
+            background-size: 0.45rem;
+            font-size: 0.5rem;
+            color:#999999;
+            margin:0.55rem 0 0 0.55rem;
+            padding-left: 0.73rem;
+        }
+        .day{
+            display: inline-block;
+            margin:0.5rem 0 0 1.28rem;
+            font-size: 0.5rem;
+        }
+        .price{
+            background: url(task5-2-04.jpg) no-repeat right center;
+            background-size: 0.38rem;
+            float: right;
+            margin:0.5rem 0.6rem 0 0;
+            padding-right: 0.73rem;
+            font-size: 0.5rem;
+            color: red;
+        }
+        .adr{
+            background: url(task5-2-03.jpg) no-repeat left center;
+            background-size: 0.37rem;
+            font-size: 0.5rem;
+            color:#999999;
+            margin:0.55rem 0 0 0.55rem;
+            padding-left: 0.73rem;
+        }
+        .bottom{
+            width:100%;
+            height: 1.85rem;
+            position:fixed;
+            bottom:0;
+            background-color: #F8FAFB;
+            text-align: center;
+        }
+        .home{
+            display: inline-block;
+            background: url(task5-2-05.jpg) no-repeat center top;
+            background-size: 0.87rem;
+            width: 0.88rem;
+            text-align: center;
+            font-size: 0.37rem;
+            color:#5FC0CD;
+            padding-top: 1rem;
+            position: absolute;
+            top: 0.22rem;
+            left: 3.1rem;
         }
         .circle{
-            width:13.1%;
-            height:13.1vw;
-            float: left;
-            margin-left:14%;
+            display: inline-block;
+            width: 1.76rem;
+            height: 1.76rem;
+            background: #5FC0CD url(task5-2-06.jpg) no-repeat center center;
+            background-size: 0.75rem;
             border-radius: 100%;
-            background-color: #5FC0CD;
+            margin-top: 0.045rem;
         }
-        .circle img{
-            width:40%;
-            margin-top:30%;
-            margin-left:30%;
+        .mine{
+            display: inline-block;
+            width: 0.81rem;
+            background: url(task5-2-07.jpg) no-repeat center top;
+            background-size: 0.79rem;
+            text-align: center;
+            font-size: 0.37rem;
+            color:#5FC0CD;
+            padding-top: 1rem;
+            position: absolute;
+            top: 0.17rem;
+            right: 3.18rem;
         }
-        .porsonal{
-            margin-top:2%;
-            float: right;
-            margin-right: 23%;
-            color:lightgray;
-        }
-        .porsonal img{
-            width:100%;
+        a{
+            text-decoration: none;
+            color: #5FC0CD;
         }
     </style>
 </head>
 <body>
+
 <div class="container">
     <div class="top">
-        <div class="employer">
-            <span>找雇主</span>
+        <div class="wrap">
+            <div class="employer">
+                <span>找雇主</span>
+            </div>
+            <div class="nurse">
+                <span>找护工</span>
+            </div>
         </div>
-        <div class="nurse">
-            <span>找护工</span>
-        </div>
+        <img class="location" src="task5-2-01.jpg"/>
     </div>
-    <div class="location">
-        <img src="task5-2-01.jpg"/>
-    </div>
-    <div class="main-top">
-        <div class="area">
-            <p>所在地&nbsp</p>
-            <img src="task5-2-02.jpg">
-        </div>
-        <div class="room">
-            <p>食宿&nbsp&nbsp</p>
-            <img src="task5-2-02.jpg">
-        </div>
-        <div class="patient">
-            <p>病人情况</p>
-            <img src="task5-2-02.jpg">
-        </div>
-    </div>
-    <div class="main1">
+
+    <ul class="info">
+        <li class="area">所在地
+            <div class="triangle"></div>
+            <div class="line"></div>
+        </li>
+        <li class="room">食宿
+            <div class="triangle"></div>
+            <div class="line"></div>
+        </li>
+        <li class="patient">病人情况
+            <div class="triangle"></div>
+            <div class="line"></div>
+        </li>
+    </ul>
+
+    <div class="main">
         <div class="title">
-            <img src="task5-2-04.jpg"/>
             <span>服务日期</span>
         </div>
-        <div class="data-time">
-            <span>2015-7-5至2017-7-12&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
-            <span style="color: red">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp25元/小时</span>
-            <img src="task5-2-03.jpg"/>
+        <p class="day">2015-7-5至2017-7-12</p>
+        <div class="price">
+            <p>25元/小时</p>
         </div>
         <div class="adr">
-            <img src="task5-2-05.jpg"/>
-            <span>北京.通州.果园</span>
+            <p>北京.通州.果园</p>
         </div>
     </div>
-    <div class="main2">
+    <div class="main">
         <div class="title">
-            <img src="task5-2-04.jpg"/>
             <span>服务日期</span>
         </div>
-        <div class="data-time">
-            <span>2015-7-5至2017-7-12&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
-            <span style="color: red">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp25元/小时</span>
-            <img src="task5-2-03.jpg"/>
+        <p class="day">2015-7-5至2017-7-12</p>
+        <div class="price">
+            <p>25元/小时</p>
         </div>
         <div class="adr">
-            <img src="task5-2-05.jpg"/>
-            <span>北京.通州.果园</span>
+            <p>北京.通州.果园</p>
         </div>
     </div>
-    <div class="main3">
+    <div class="main">
         <div class="title">
-            <img src="task5-2-04.jpg"/>
             <span>服务日期</span>
         </div>
-        <div class="data-time">
-            <span>2015-7-5至2017-7-12&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
-            <span style="color: red">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp25元/小时</span>
-            <img src="task5-2-03.jpg"/>
+        <p class="day">2015-7-5至2017-7-12</p>
+        <div class="price">
+            <p>25元/小时</p>
         </div>
         <div class="adr">
-            <img src="task5-2-05.jpg"/>
-            <span>北京.通州.果园</span>
+            <p>北京.通州.果园</p>
+        </div>
+    </div>
+    <div class="main">
+        <div class="title">
+            <span>服务日期</span>
+        </div>
+        <p class="day">2015-7-5至2017-7-12</p>
+        <div class="price">
+            <p>25元/小时</p>
+        </div>
+        <div class="adr">
+            <p>北京.通州.果园</p>
         </div>
     </div>
 </div>
 <div class="bottom">
     <div class="home">
-        <img src="task5-2-06.jpg"/>
-        <div class="shouxian">
-            <span>首页</span>
-        </div>
+        <p class="home-text"><a href="http://119.10.57.69:880/jnshu042/Task5-1.html">首页</a></p>
     </div>
-
     <div class="circle">
-        <img src="task5-2-07.jpg"/>
     </div>
-    <div class="porsonal">
-        <img src="task5-2-08.jpg"/>
-        <div class="wode">
-            <span>我的</span>
-        </div>
+    <div class="mine">
+        <p class="mine-text"><a href="http://119.10.57.69:880/jnshu042/Task5-1.html">我的</a></p>
     </div>
-
-
 </div>
 </body>
 </html>
