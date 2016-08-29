@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>桌游精灵</title>
     <style type="text/css">
@@ -9,7 +9,7 @@
         @media screen and (max-width: 768px) {
             html {
                 /* 小于768px，1rem=40px */
-                font-size: 250%;
+                font-size: 375%;
             }
         }
         @media screen and (min-width: 768px) {
@@ -35,14 +35,13 @@
             padding:0;
         }
         body{
-            font-family:sans-serif;
+            font-family:"Microsoft YaHei";
         }
-        .content{
-           margin:0 auto;
-           width:100%;
-           max-width: 6.4rem;
-           height:11rem;
-       }
+        .contetn{
+            margin:0 auto;
+            width:100%;
+            max-width: 6.4rem;
+        }
         .top{
             position:relative;
             width:100%;
@@ -50,6 +49,7 @@
             line-height: 0.92rem;
             background:#22292C url(task3-arrow.png) no-repeat 0.17rem center;
             background-size: 0.2rem;
+            text-align: center;
         }
         .fanhui{
             position:absolute;
@@ -57,13 +57,14 @@
             font-size: 0.26rem;
             color:white;
         }
-        .mojing{
-            position:absolute;
-            left: 2.86rem;
+        .title{
+            display: inline-block;
             font-size: 0.34rem;
             color:white;
+            vertical-align: top;
         }
         ul{
+            display: inline-block;
             position: absolute;
             list-style: none;
             font-size: 0;
@@ -93,6 +94,7 @@
         }
         img.logo{
             margin-top: 1.16rem;
+            width:1.82rem;
         }
         .discribe{
             font-size: 0.3rem;
@@ -131,10 +133,10 @@
     </style>
 </head>
 <body>
-<div class="content">
+<div class="contetn">
     <div class="top">
-        <span class="fanhui">返回</span>
-        <span class="mojing">魔镜</span>
+        <div  class="fanhui"><span>返回</span></div>
+        <p class="title">魔镜</p>
         <ul>
             <li></li>
             <li></li>

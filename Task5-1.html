@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>个人主页</title>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        @media (max-width: 360px) {
+            html {
+                font-size: 150%;
+            }
+        }
+        @media (min-width: 360px) {
+            html {
+                font-size: 200%;
+            }
+        }
+        @media (min-width: 480px) {
+            html {
+                font-size: 250%;
+            }
+        }
+        @media (min-width: 768px) {
+            html {
+                /* 768px-992px每11.2像素宽字体减小2px(60px-80px) */
+                font-size: calc(375% + (100vw - 768px) / 11.2);
+            }
+        }
+        @media (min-width: 992px) {
+            html {
+                /* 992px-1200px每10.4像素宽字体减小2px(80px-100px) */
+                font-size: calc(500% + (100vw - 992px) / 10.4);
+            }
+        }
+        @media (min-width: 1200px) {
+            html {
+                /* 大于1200px，1rem=100px */
+                font-size:625%;
+            }
+        }
+        .container{
+            margin:0;
+            width:100%;
+            min-width: 320px;
+        }
+        .top{
+            margin:0;
+            width:100%;
+            height:1.53rem;
+            line-height: 1.53rem;
+            background: #5FC0CD url(task5-1-01.png) no-repeat 0.65rem center;
+            background-size: 0.39rem;
+            text-align: center;
+        }
+        .title{
+            font-size: 0.67rem;
+            color:white;
+            vertical-align: top;
+        }
+        .content{
+            width:100%;
+            height: 6.1rem;
+            background: url(task5-1-02.png);
+            background-size:100% 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .picture{
+            position:absolute;
+            width:3.17rem;
+            height:3.17rem;
+            top: 1.47rem;
+            left: 0.55rem;
+            background: white url(task5-1-03.png) no-repeat center 0.22rem;
+            background-size: 2.2rem;
+            border-radius: 100%;
+        }
+        .name{
+            margin-top: 2.17rem;
+            margin-left: 4.48rem;
+            font-size: 0.67rem;
+            color:white;
+        }
+        .adrs{
+            margin-top: 0.45rem;
+            margin-left: 4.8rem;
+            padding-left: 0.4rem;
+            font-size: 0.45rem;
+            color:white;
+            background: url(task5-1-04.png) no-repeat left center;
+            background-size: 0.34rem;
+
+        }
+        .main{
+            width:100%;
+            background-color: white;
+        }
+        .skills{
+            height: 1.85rem;
+            line-height: 1.85rem;
+            font-size: 0.6rem;
+            border-bottom: 0.01rem solid lightgray;
+        }
+        .left-line{
+            display: inline-block;
+            width: 0.06rem;
+            height: 0.5rem;
+            margin-left: 0.56rem;
+            margin-right: 0.52rem;
+            background-color: #5FC0CD;
+            border-radius: 0.05rem;
+            vertical-align: middle;
+        }
+        .skills span{
+            vertical-align: middle;
+        }
+        .house-food{
+            margin-left: 0.62rem;
+            height: 1.85rem;
+            line-height: 1.85rem;
+            border-bottom: 0.01rem solid lightgray;
+            position: relative;
+        }
+        .house{
+            display: inline-block;
+            margin-left: 0.52rem;
+            padding-left: 0.63rem;
+            font-size: 0.6rem;
+            background: url("task5-1-05.png") no-repeat left center;
+            background-size: 0.47rem;
+            vertical-align: top;
+        }
+        .food{
+            display: inline-block;
+            margin-left: 0.52rem;
+            padding-left: 0.63rem;
+            font-size: 0.6rem;
+            background: url("task5-1-05.png") no-repeat left center;
+            background-size: 0.47rem;
+            vertical-align: top;
+        }
+        .hf-line{
+            display: inline-block;
+            position:absolute;
+            top: 0.675rem;
+            width:0.02rem;
+            height:0.5rem;
+            background-color: lightgray;
+            vertical-align: top;
+        }
+        .details{
+            margin-left: 0.62rem;
+            height: 1.85rem;
+            line-height: 1.85rem;
+            border-bottom: 0.01rem solid lightgray;
+            position: relative;
+        }
+        .left{
+            display: inline-block;
+            margin-left: 0.52rem;
+            font-size: 0.6rem;
+            vertical-align: top;
+            color:#999999;
+        }
+        .right{
+            display: inline-block;
+            margin-left: 0.62rem;
+            font-size: 0.6rem;
+            vertical-align: top;
+        }
+        .introduce{
+            display: inline-block;
+            width:60%;
+            margin-left: 0.62rem;
+            font-size: 0.4rem;
+            line-height: 0.6rem;
+            vertical-align: middle;
+        }
+
+        .liuyan{
+            float: left;
+            margin-top:1.85rem;
+            margin-left:0.7rem;
+            margin-bottom: 0.75rem;
+            width:43%;
+            height:1.65rem;
+            border: 0.02rem solid #5FC0CD;
+            border-radius: 0.1rem;
+            background-color: white;
+            font-size: 0.64rem;
+            font-weight: bolder;
+            color: #5FC0CD;
+            cursor: pointer;
+        }
+        .dianhua{
+            float: right;
+            margin-top:1.85rem;
+            margin-right:0.7rem;
+            width:43%;
+            height:1.65rem;
+            border: 0.02rem solid #5FC0CD;
+            border-radius: 0.1rem;
+            background-color: #5FC0CD;
+            font-size: 0.64rem;
+            font-weight: bolder;
+            color:white;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="top">
+        <span class="title">个人主页</span>
+    </div>
+    <div class="content">
+        <div class="picture">
+        </div>
+        <p class="name">高素雅&nbsp51岁</p>
+        <div class="adrs">
+            <span>北京.通州.果园</span>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="skills">
+            <div class="left-line"></div>
+            <span>专业技能</span>
+        </div>
+        <div class="house-food">
+            <p class="house">住家</p>
+            <div class="hf-line"></div>
+            <p class="food">不含餐</p>
+        </div>
+
+        <div class="details">
+            <p class="left">从业年限</p>
+            <div class="hf-line"></div>
+            <p class="right">0～3年</p>
+        </div>
+
+        <div class="details">
+            <p class="left">工作时间</p>
+            <div class="hf-line"></div>
+            <p class="right">全天</p>
+        </div>
+
+        <div class="details">
+            <p class="left">服务价格</p>
+            <div class="hf-line"></div>
+            <p class="right" style="color: red">25元/小时</p>
+        </div>
+
+        <div class="details">
+            <p class="left">自我介绍</p>
+            <div class="hf-line"></div>
+            <p class="introduce">可以洗衣、做饭、照顾老人。在护工方面有五年经验，经验丰富。</p>
+        </div>
+
+        <input class="liuyan" type="button" value="留言">
+        <input class="dianhua" type="button" value="电话联系">
+
+
+
+    </div>
+</div>
+
+</body>
+</html>
