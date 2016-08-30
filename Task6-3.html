@@ -1,19 +1,49 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="zh-CN">
+<head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Task6-3</title>
     <style type="text/css">
         *{
             margin:0;
             padding:0;
         }
-        html{
-            font-size: 62.5%;
-            font-family: 黑体;
+        @media (max-width: 360px) {
+            html {
+                font-size: 35%;
+            }
+        }
+        @media (min-width: 360px) {
+            html {
+                font-size: 40%;
+            }
+        }
+        @media (min-width: 480px) {
+            html {
+                font-size: 45%;
+            }
+        }
+        @media (min-width: 768px) {
+            html {
+                font-size:50%;
+            }
+        }
+        @media (min-width: 992px) {
+            html {
+
+                font-size: 55%;
+            }
+        }
+        @media (min-width: 1200px) {
+            html {
+                font-size:62.5%;
+            }
         }
         body{
             background-color: #29BDE0;
+            font-family: 黑体;
         }
         .container{
             margin:0 auto;
@@ -70,12 +100,9 @@
             width:8.125%;
             height: 8.125vw;
             border-radius: 100%;
-            background-color: #FBB435;
-        }
-        .play img{
-            width:50%;
-            margin-top: 21.15%;
-            margin-left: 31%;
+            background: #FBB435 url(task-6-3-3.png) no-repeat 55% center;
+            background-size: 50%;
+            cursor: pointer;
         }
         p{
             margin-left:11.25%;
@@ -88,10 +115,8 @@
             margin-top:3.59375%;
             margin-left:6.25%;
             width:21.25%;
-
         }
         .player-top{
-
             width:100%;
             height: 21.25vw;
             border:0.5rem solid white;
@@ -120,21 +145,18 @@
             color:white;
         }
         .player-bottom{
+            width:100%;
             margin-top:3.59375%;
+            margin-left:2%;
             opacity: 0;
+            font-size: 0;
         }
+
         .player-bottom img{
             width:22%;
+            margin-right: 3%;
         }
-        img.icon2{
-            margin-left:1.8%;
-        }
-        img.icon3{
-            margin-left:1.8%;
-        }
-        img.icon4{
-            margin-left:1.8%;
-        }
+
         .player1{
             float:left;
             margin-top:3.59375%;
@@ -145,18 +167,20 @@
             position: fixed;
             bottom:0;
             width:100%;
-            height:20vw;
+            height:29.6875vw;
             background-color: #29BDE0;
             border-top: 0.2rem solid white;
             text-align: center;
-            line-height:20vw ;
+            line-height:29.6875vw;
         }
         .footer input{
             width:60%;
-            height: 10vw;
+            height: 13.6vw;
             background-color: #FBB435;
             font-size: 3rem;
+            font-family: 黑体;
             color:white;
+            cursor: pointer;
         }
         .player-bottom:hover{
             opacity: 1;
@@ -179,9 +203,10 @@
     <div class="discas">
         <span>发言讨论结束，请大家投票</span>
 
-        <div class="play">
-            <img src="task-6-3-3.png"/>
-        </div>
+        <a  onclick="playAudio()" class="play"></a>
+        <audio id="myAudio">
+            <source src="music.mp3" type="audio/mpeg">
+        </audio>
 
     </div>
     <div class="triangle"></div>
@@ -336,5 +361,20 @@
         </a>
     </div>
 </div>
+<script>
+    var a=document.getElementById("myAudio");
+    var x=true;
+    function playAudio(){
+        if(x){
+            a.play();
+            x=false;
+        }
+        else {
+            a.pause();
+            x = true;
+        }
+        console.log(x);
+    }
+</script>
 </body>
 </html>
