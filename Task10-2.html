@@ -12,9 +12,29 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
     <style type="text/css">
-
-        html {
-            font-size:625%;
+        @media screen and (max-width: 768px) {
+            html {
+                /* 小于768px，1rem=40px */
+                font-size: 250%;
+            }
+        }
+        @media screen and (min-width: 768px) {
+            html {
+                /* 768px-992px每11.2像素宽字体减小2px(60px-80px) */
+                font-size: calc(375% + (100vw - 768px) / 11.2);
+            }
+        }
+        @media screen and (min-width: 992px) {
+            html {
+                /* 992px-1200px每10.4像素宽字体减小2px(80px-100px) */
+                font-size: calc(500% + (100vw - 992px) / 10.4);
+            }
+        }
+        @media screen and (min-width: 1200px) {
+            html {
+                /* 大于1200px，1rem=100px */
+                font-size:625%;
+            }
         }
         body{
             background-color: #FAFAFA;
@@ -182,18 +202,18 @@
         }
         .histy{
             margin:0.25rem 0.6rem 0.24rem 0.6rem;
-            font-size: 14px;
+            font-size: 0.14rem;
             color:#BCBCBC;
-            line-height: 28px;
+            line-height: 0.35rem;
         }
         .content{
             margin:0 auto;
-            font-size: 14px;
+            font-size: 0.14rem;
             color:#BCBCBC;
-            line-height: 28px;
-            text-indent: 28px;
+            line-height: 0.35rem;
+            text-indent: 0.28rem;
             background-color: white;
-            border:2px solid #F7F7F7;
+            border:0.02rem solid #F7F7F7;
             margin-bottom: 2.35rem;
         }
         .content p{
@@ -294,9 +314,9 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#">首页<span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">职业</a></li>
-                    <li><a href="#">推荐</a></li>
+                    <li><a href="http://119.10.57.69:880/jnshu042/Task10-1.html">首页</a></li>
+                    <li><a href="http://119.10.57.69:880/jnshu042/Task11.html">职业</a></li>
+                    <li class="active"><a href="#">推荐</a></li>
                     <li><a href="#">关于</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->

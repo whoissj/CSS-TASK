@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Task10</title>
+    <title>Task10-1</title>
 
     <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -46,16 +46,21 @@
             height: 0.5rem;
             line-height: 0.5rem;
         }
-        #phonecall{
-            margin-left: 0.4rem;
-        }
-
         ul#app{
             float:right;
             list-style: none;
             font-size: 0;
-            margin:0 0.4rem 0 0;
+            margin:0;
             padding:0;
+        }
+        @media (max-width: 320px) {
+            ul#app{
+                float:left;
+                list-style: none;
+                font-size: 0;
+                margin:0;
+                padding:0;
+            }
         }
         ul#app li{
             display: inline-block;
@@ -83,11 +88,6 @@
             margin-left: 0.1rem;
         }
 
-        @media (max-width:768px) {
-            .navbar-default .navbar-nav > li > a {
-                text-align: center;
-            }
-        }
         @media (min-width: 991px) {
             .navbar-default .navbar-nav > li > a {
                 line-height: 1rem;
@@ -106,13 +106,10 @@
             color: white;
             margin-left: 0.1rem;
         }
-
-        #carousel-example-generic{
-            margin-bottom:1.3rem;
-        }
         #main{
             width:100%;
             max-width: 12rem;
+            overflow: hidden;
         }
         @media (min-width: 1200px) {
             #main{
@@ -145,7 +142,7 @@
         }
         @media screen and (max-width: 768px) {
             #gp p:nth-of-type(2) {
-                width: 5rem;
+                width: 3.5rem;
             }
         }
         #good .col-lg-3:nth-of-type(4){
@@ -431,7 +428,7 @@
 
 </head>
 <body>
-<div class="container-fluid">
+<div class="container-fluid" id="main">
     <div class="header">
         <span id="phonecall">客服热线：010-549-78645</span>
         <ul id="app">
@@ -444,23 +441,25 @@
 
 <nav class="navbar navbar-default" >
     <div class="container-fluid" id="nav">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+        <div class="container-fluid" id="main">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="http://119.10.57.69:880/jnshu042/Task10-1.html">首页</a></li>
+                    <li><a href="http://119.10.57.69:880/jnshu042/Task11.html">职业</a></li>
+                    <li><a href="#">推荐</a></li>
+                    <li><a href="#">关于</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#">首页<span class="sr-only">(current)</span></a></li>
-                <li><a href="#">职业</a></li>
-                <li><a href="#">推荐</a></li>
-                <li><a href="#">关于</a></li>
-            </ul>
-        </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
 
