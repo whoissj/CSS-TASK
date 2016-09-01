@@ -3,6 +3,8 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Task9</title>
+    <link rel="icon" href="favicon.ico.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="favicon.ico.png" type="image/x-icon"/>
     <style type="text/css">
         *{
             margin:0;
@@ -89,15 +91,21 @@
         }
         .proc{
             width:630px;
-
             margin-left: 930px;
             margin-top:40px;
             padding:0;
+            display: -moz-box;
             display: -webkit-box;
-
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
         }
         .p1,.p2,.p3,.p4{
             -webkit-box-flex: 1;
+            -moz-box-flex: 1;
+            -webkit-flex:1;
+            -ms-flex:1;
+            flex:1;
             text-align: center;
         }
 
@@ -287,6 +295,9 @@
             font-size: 16px;
             color:gray;
             -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            appearance:none;
             padding-left: 14px;
             background: url("task9-04.png") no-repeat 90px center;
         }
@@ -301,6 +312,8 @@
         .style form input{
             -webkit-appearance: none;
             cursor: pointer;
+            position:absolute;
+            margin-top: 25px;
             margin-right: 20px;
             width: 18px;
             height:18px;
@@ -313,6 +326,7 @@
         }
         .style form label{
             cursor: pointer;
+            margin-left: 35px;
             margin-right: 60px;
         }
         .size{
@@ -336,6 +350,9 @@
             font-size: 16px;
             color:gray;
             -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            appearance:none;
             padding-left: 14px;
             background: url("task9-04.png") no-repeat 90px center;
         }
@@ -348,6 +365,7 @@
             -webkit-appearance: none;
             cursor: pointer;
             float: left;
+            margin-top: 4px;
             margin-right: 20px;
             width: 18px;
             height:18px;
@@ -362,6 +380,7 @@
             -webkit-appearance: none;
             cursor: pointer;
             float: left;
+            margin-top: 4px;
             margin-right: 20px;
             width: 18px;
             height:18px;
@@ -431,6 +450,9 @@
             font-size: 16px;
             color:gray;
             -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            appearance:none;
             padding-left: 14px;
             background: url("task9-04.png") no-repeat 90px center;
         }
@@ -443,7 +465,10 @@
         .kind form input{
             -webkit-appearance: none;
             cursor: pointer;
-            margin-right: 20px;
+            position: absolute;
+            margin-top: 68px;
+            margin-left: 5px;
+            margin-right: 70px;
             width: 18px;
             height:18px;
             border-radius: 50%;
@@ -455,6 +480,7 @@
         }
         .kind form label{
             cursor: pointer;
+            margin-left: 40px;
             margin-right: 60px;
         }
         .next{
@@ -652,6 +678,7 @@
             <p>4.确认下单</p>
         </div>
     </div>
+
     <div class="d-line"></div>
     <p class="step">请您按照以下步骤来定制您的纸箱</p>
     <div class="clear"></div>
@@ -664,7 +691,7 @@
 
         <div class="style">
             <form>
-                <input type="radio" name="style" id="s1" checked="checked"/><label for="s1">对口箱</label>
+                <input type="radio" name="style" id="s1" checked="checked"/><label for="s1"><span>对口箱</span></label>
                 <input type="radio" name="style" id="s2" /><label for="s2">飞机箱</label>
                 <input type="radio" name="style" id="s3" /><label for="s3">天地盖</label>
             </form>

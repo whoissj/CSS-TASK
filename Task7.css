@@ -50,12 +50,15 @@ li.wb{
     height:100px;
     background-color:#29B078 ;
     font-size: 16px;
-    font-weight: bold;
     color:white;
     line-height: 100px;
     letter-spacing: 4px;
 }
 .home,.job,.recommend,.about{
+    box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing:border-box;
     text-align: center;
     width:100px;
     height: 100px;
@@ -80,23 +83,23 @@ li.wb{
 
 .home:hover{
     width:100px;
-    height: 96px;
+    height: 100px;
     cursor: pointer;
     border-bottom: 4px solid white;
 }
 .job:hover{
     width:100px;
-    height: 96px;
+    height: 100px;
     cursor: pointer;
     border-bottom: 4px solid white;
 }.recommend:hover{
      width:100px;
-     height: 96px;
+     height: 100px;
      cursor: pointer;
      border-bottom: 4px solid white;
  }.about:hover{
       width:100px;
-      height: 96px;
+      height: 100px;
       cursor: pointer;
       border-bottom: 4px solid white;
   }
@@ -123,38 +126,39 @@ a{
     text-align: center;
     color:white;
     font-size: 14px;
-    font-weight: bold;
 }
 .jnshu{
     float:left;
     margin-top:40px;
     margin-left:321px;
     color:white;
-    font-weight: bold;
     letter-spacing: 1px;
+    font-size: 16px;
 }
 .jnshu p:nth-of-type(2){
     display: inline-block;
     margin-top:68px;
     padding-right: 10px;
     border-right:2px solid white;
+    font-size: 14px;
 }
 .jnshu p:nth-of-type(3){
     display: inline-block;
     margin-top:68px;
     padding-right: 10px;
     border-right:2px solid white;
+    font-size: 14px;
 }
 .jnshu p:nth-of-type(4){
     display: inline-block;
     margin-top:68px;
+    font-size: 14px;
 }
 .website{
     float:left;
     margin-top:40px;
     margin-left: 160px;
     color:white;
-    font-weight: bold;
 }
 .website p:nth-of-type(1){
     float:left;
@@ -188,7 +192,6 @@ a{
     margin-top:40px;
     margin-left:510px;
     font-size: 16px;
-    font-weight: bold;
     color:white;
 }
 .qr p{
