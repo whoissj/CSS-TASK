@@ -8,4 +8,4 @@
   5.响应式<br><br>
   6.Bootstrap<br><br>
   7.Less<br><br>
-  8.编码规范<br><br>
+  8.[`编码规范`](http://zoomzhao.github.io/code-guide/)<br><br>
