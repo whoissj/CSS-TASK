@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="father">
+    <input type="text" id="input">
+    <button id="button" onclick="test()">13123</button>
+</div>
+
+<script>
+    var input = document.getElementById('input')
+    var button = document.getElementById('button')
+    var father = document.getElementById('father')
+    function test() {
+        console.log(123)
+        father.removeChild(input)
+    }
+</script>
+</body>
+</html>
